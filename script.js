@@ -164,3 +164,36 @@ function findAverage(array) {
 };
 
 console.log(findAverage([27, 61, 67, 59, 2]));
+
+//13. Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+//    Note: input will never be an empty string
+
+function fakeBin(x){
+	let res = '';
+	x.split('').forEach(e => e < 5 ? res += 0 : res += 1);
+	return res;
+};
+
+console.log(fakeBin('1231552'));
+
+//14. Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+//    Return your answer as a number.
+
+function sumMix(x){
+	return x.reduce((acc, curr) => acc + Number(curr), 0);
+};
+
+console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]));
+
+//15. Build a function that returns an array of integers from n to 1 where n>0.
+//    Example : n=5 --> [5,4,3,2,1]
+
+const reverseSeq = n => {
+	let res = [];
+	for(let i = 1; i <= n; i++) {
+		res.push(i);
+	}
+	return res.reverse();
+ };
+
+ console.log(reverseSeq(5));
